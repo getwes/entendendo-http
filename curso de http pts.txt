@@ -1,0 +1,67 @@
+oque é HTTP
+
+O HTTP é um protocolo que define as regras de comunicação entre cliente e servidor na internet.
+
+************************
+
+https A versão segura do http
+
+ o HTTPS, que basicamente é o HTTP comum, porém com uma camada adicional de segurança/criptografia que antes era SSL, mas posteriormente passou a ser também TLS. É muito comum que estas duas siglas sejam encontradas juntas como SSL/TLS por se tratarem da mesma questão de segurança. Sendo assim, temos dois termos
+
+HTTP: HyperText Transfer Protocol
+SSL/TLS: Secure Sockets Layer / Transport Layer Security
+
+************************
+
+ funcionamento do https
+
+O HTTPS para garantir segurança usa criptografia baseada em chaves públicas e privadas e para gerar essas chaves publicas e privadas é preciso garantir a identidade de quem possui essas chaves e isso é feito a partir de um certificado digital, ou seja, um certificado digital é utilizado para identificar determinada entidade e ainda é utilizada para geração das chaves de criptografia.
+
+Apesar disso, ainda é necessário que uma autoridade certificadora, que nada mais é que um órgão ou entidade confiável, garanta não apenas a identidade do site mas também a validade do certificado. No caso da Alura a autoridade certificadora é a COMODO RSA Domain Validation, mas existem outras.
+
+Dito isso, como tudo funciona? Os navegadores em posse da chave pública criptografam as informações e as enviam para o servidor que as descriptografa com a chave privada. É importante notar que apenas a chave privada descriptografa as informações criptografadas com a pública, e também que deve-se manter a chave privada segura.
+
+************************
+
+DNS
+
+Dito isso, como tudo funciona? Os navegadores em posse da chave pública criptografam as informações e as enviam para o servidor que as descriptografa com a chave privada. É importante notar que apenas a chave privada descriptografa as informações criptografadas com a pública, e também que deve-se manter a chave privada segura.
+
+************************
+
+ENDEREÇOS IP'S
+
+O nome do domínio é organizado em uma hierarquia que foi criada para organizar os sites na internet e para a gente ter algo fácil para se lembrar. Para ser correto, a internet funciona na verdade sem esses domínios. Aqueles nomes são coisas dos humanos, as máquinas na internet têm uma outra forma de se endereçar. Elas usam o que se chama endereços de IP, que nada mais são do que números - muito difícil para gente decorar.
+
+Sendo assim, podemos acessar o Google usando um IP. Para quem é muito curioso, mas muito curioso mesmo e deseja saber qual é o IP do Google, pode digitar na linha de comando a seguinte instrução:
+
+
+nslookup google.com
+...
+Name:    google.com
+Address: 216.58.202.238
+************************
+
+PORTAS
+
+Como já falamos, quando usamos a URL https://www.alura.com.br abrimos uma conexão com o servidor que roda em algum lugar na internet. Para estabelecer uma conexão na rede é preciso saber qual é o endereço IP, e já vimos como descobri-lo.
+
+Agora imagine que o servidor é uma casa: dependendo da casa há várias portas disponíveis. O que é preciso saber é qual porta devemos utilizar quando chegarmos na casa. Ou seja, devemos saber qual porta é utilizada para o protocolo HTTP!
+
+************************
+
+URL
+
+Repare que estamos usando umas regras bem definidas para descrever a localização de um recurso na web. Todos os endereços na web sempre seguem esse mesmo padrão: protocolo://dominio:porta/caminho/recurso. Esse padrão, na verdade, segue uma especificação que foi batizada de Uniform Resource Locator, abreviada como URL. Então, as URLs são os endereços na web!
+
+************************
+
+Conhecendo cookies
+
+Então onde está esse número? O navegador grava esse número em um arquivo especial para cada site, são os famosos cookies. Como acessar esse cookie depende um pouco do navegador em uso. O mais importante é entender o porquê da existência desse número e onde ele foi gravado.
+
+***********************
+
+
+
+
