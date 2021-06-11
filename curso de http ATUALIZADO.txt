@@ -62,6 +62,29 @@ Então onde está esse número? O navegador grava esse número em um arquivo esp
 
 ***********************
 
+MODELO
+
+Já descobrimos que o HTTP é um protocolo que define as regras de comunicação entre cliente e servidor e de que as URLs são constituídas. Porém isso não é tudo, vejamos mais alguns detalhes sobre o funcionameto da Web e do HTTP.
+
+Realizaremos um teste efetuando login na Alura. Quando preenchemos o formulário e clicamos no botão, o navegador envia o nosso login e a nossa senha para o servidor através do protocolo HTTP! Vamos detalhar um pouco esta ação.
+
+No mundo HTTP, a requisição enviada pelo navegador para o servidor é chamada de HTTP REQUEST. Recebemos a página /dashboard como resposta já que enviamos login e senha válidos. No mundo HTTP essa resposta é chamada de HTTP RESPONSE.
+
+A comunicação segue sempre esse modelo: o cliente envia uma requisição e o servidor responde. Requisição e Resposta ou em inglês: Request-Response. Aqui é importante saber que a comunicação sempre começa com o cliente: é ele quem pede as informações. O servidor responde apenas o que foi requisitado e nunca inicia a comunicaçãO
+
+***********************
+
+Conhecendo cookies
+
+Então onde está esse número? O navegador grava esse número em um arquivo especial para cada site, são os famosos cookies. Como acessar esse cookie depende um pouco do navegador em uso. O mais importante é entender o porquê da existência desse número e onde ele foi gravado.
+
+No Chrome podemos ver todos os cookies armazenados nas Configurações -> Privacidade -> Configurações de conteúdo... -> Todos os cookies e dados de site.... Se procurarmos por Alura, em cursos.alura.com.br, lá temos um cookie com o nome caelum.login.token, que contém o número da identificação. Se apagarmos esse cookie, perderemos nossa identificação, sendo assim, a Alura exigirá um novo login pois não saberá que já tínhamos logado.
+
+Normalmente o nome do cookie é algo como session-id, dependendo da plataforma de desenvolvimento utilizada ele pode se chamar de PHPSESSID ou ASP.NET_SessionId ou JSESSIONID ou outro nome que foi inventado! O Cookie será gerado de forma transparente pela tecnologia que você for utilizar para criar aplicativos web. Esse nome, PHPSESSIONID, JSESSIONID ou outro, é gerado pela ferramenta de gerenciamento de Sessão. Por isso ela muda o nome. Se você está usando PHP, então o PHP gerará o nome do Cookie e seu identificador (número aleatório) e chamará o cookie PHPSESSIONID. No Java já será usado o nome JSESSIONID.
+
+Resumindo, todas as plataformas ajudam a gerar esse número e a criar o cookie de maneira transparente. É dessa forma que as plataformas gerenciam as SESSÕES com o usuário. Como isso funciona de modo concreto você aprenderá nos cursos e carreiras específicas.
+
+A ideia de manter dados entre requisições é algo muito comum no desenvolvimento de aplicações na web. Um usuário que se loga no sistema web causa a criação de uma sessão. Uma sessão então é útil para guardar informações sobre o usuário e ações dele. Um exemplo clássico é um carrinho de compras. Entre várias requisições estamos usando o mesmo carrinho de compras que guarda os nossos produtos escolhidos (fizemos uma sessão de compras online).
 
 
 
