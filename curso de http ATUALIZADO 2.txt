@@ -86,5 +86,24 @@ Resumindo, todas as plataformas ajudam a gerar esse número e a criar o cookie d
 
 A ideia de manter dados entre requisições é algo muito comum no desenvolvimento de aplicações na web. Um usuário que se loga no sistema web causa a criação de uma sessão. Uma sessão então é útil para guardar informações sobre o usuário e ações dele. Um exemplo clássico é um carrinho de compras. Entre várias requisições estamos usando o mesmo carrinho de compras que guarda os nossos produtos escolhidos (fizemos uma sessão de compras online).
 
+*************************
 
+Tipos de dados diferentes
+No console podemos ver que aparecem mais requisições (cada linha representa um novo request). Quando o servidor Alura devolve a resposta para o navegador vem o conteúdo da página inicial em um formato especial, chamado de HTML. O HTML define a estrutura da nossa página, define os menus, botões, links, rodapé etc. Mas dentro do HTML não vêm as imagens e outros arquivos necessários para deixar o site perfeito. Dentro dele vem apenas a URL (endereço) desses outros recursos.
+
+Então, ao receber o HTML, o navegador dispara várias outras requisições para carregar as imagens, fontes e outros dados. Como também são requisições HTTP, o console mostra suas informações. Podemos ver que na resposta vem o tipo do conteúdo, por exemplo text/html, text/css, image/svg+xml, entre outros.
+
+O importante é saber que o protocolo HTTP não está preso em algum formato específico. Podemos trafegar qualquer informação com ele, seja texto ou binário!
+
+**************************
+
+O código 200
+Continuando no console, a segunda requisição foi para https://www.alura.com.br, novamente usando o método HTTP GET com a intenção de receber dados. Agora o código de resposta foi 200. Este é um dos códigos mais comuns e significa que tudo deu certo! Dessa vez não foi preciso fazer um redirecionamento (não tem o cabeçalho Location na resposta) e não deu nenhum outro problema. A requisição foi aceita e processada corretamente - código 200. Perfeito.
+
+**************************
+
+Redirecionando entre sites
+Se alguém acessa a Alura usando http (lembrando, inseguro) automaticamente é chamado o site seguro (https). Isto é um comportamento muito comum para garantir que usamos https sempre. Se esquecermos de usar https, o servidor devolve o status 301 com a nova localização, mas agora usando https.
+
+O navegador, ao receber 301, chama automaticamente a nova URL. No mundo de desenvolvimento web este comportamento é chamado de Redirecionamento pelo navegador, ou Redirecionamento no lado do cliente. Fomos redirecionados para o recurso correto. A tarefa do desenvolvedor é definir o código de resposta e, no caso em que algum recurso tenha mudado a URL, o código 301 será usado com o cabeçalho Location.
 
